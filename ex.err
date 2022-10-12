@@ -1,0 +1,20 @@
+C:\Users\Andy\Documents\Eu\EuAll\mouse.e:82
+<0074>:: Errors resolving the following references:
+	'xal_mouse_button_down' (mouse.e:82) has not been declared.
+
+	return c_func(xal_mouse_button_down,{st,btn})
+	                                   ^
+
+
+--- Defined Words ---
+EU4
+EU4_1
+EU4_1_0
+WINDOWS
+WIN32
+CONSOLE
+X86
+BITS32
+LONG32
+EUI
+-------------------
