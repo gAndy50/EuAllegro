@@ -52,12 +52,12 @@ public include mouse.e
 public include mouse_cursor.e
 public include path.e
 public include render_state.e
---public include shader.e
+public include shader.e
 --public include system.e
 --public include threads.e
 --public include timer.e
---public include tls.e
+public include tls.e
 public include touch_input.e
 public include transformations.e
 public include utf8.e
-­61.0
+­59.0
