@@ -1,11 +1,12 @@
 # EuAllegro
 
-#ABOUT
+#ABOUT:
 
 This is a wrapper of Allegro for the Euphoria programming language. The version of Allegro wrapped is 5.2.6. This allows you to use the Allegro game programming
 library with Euphoria. You can use it to make video games and multimeda applications and such. 
 
-#LICENSE
+#LICENSE:
+
 Copyright (c) Andy P. 2022
 
 Zlib style
