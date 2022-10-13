@@ -43,7 +43,7 @@ public include file.e
 --public include fmaths.e
 --public include fshook.e
 public include fullscreen_mode.e
-public include haptic.e
+--public include haptic.e
 public include joystick.e
 public include keyboard.e
 --public include memory.e
@@ -60,4 +60,4 @@ public include tls.e
 public include touch_input.e
 public include transformations.e
 public include utf8.e
-­35.0
+Â­35.0
