@@ -39,14 +39,14 @@ public include drawing.e
 public include error.e
 public include events.e
 public include file.e
---publinc include fixed.e
---public include fmaths.e
---public include fshook.e
+--publinc include fixed.e --Euphoria has math routines already
+--public include fmaths.e --As above
+public include fshook.e
 public include fullscreen_mode.e
 public include haptic.e
 public include joystick.e
 public include keyboard.e
---public include memory.e
+public include memory.e
 public include monitor.e
 public include mouse.e
 public include mouse_cursor.e
@@ -54,10 +54,10 @@ public include path.e
 public include render_state.e
 public include shader.e
 public include system.e
---public include threads.e
+public include threads.e
 public include timer.e
 public include tls.e
 public include touch_input.e
 public include transformations.e
 public include utf8.e
-­46.0
+­44.0
