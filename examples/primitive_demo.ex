@@ -43,9 +43,11 @@ procedure main()
   
  al_rest(5.0)
  
+ al_shutdown_primitives_addon()
+ 
  al_destroy_display(dis)
 	
 end procedure
 
 main()
-­40.43
+Â­40.43
