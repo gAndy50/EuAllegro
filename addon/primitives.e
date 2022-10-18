@@ -1,4 +1,5 @@
 --Allegro Primitives
+--Euphoria Port by: Andy P.
 
 include std/ffi.e
 
@@ -312,3 +313,4 @@ end procedure
 public procedure al_draw_filled_polygon_with_holes(atom vertices,atom count,sequence col)
 	c_proc(xal_draw_filled_polygon_with_holes,{vertices,count,col})
 end procedure
+­3.0
