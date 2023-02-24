@@ -7,7 +7,7 @@ library with Euphoria. You can use it to make video games and multimeda applicat
 
 # LICENSE:
 
-Copyright (c) Andy P. 2022
+Copyright (c) Andy P. 2023
 
 Zlib style
 
