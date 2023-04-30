@@ -13,7 +13,7 @@ public enum type ALLEGRO_AUDIO_EVENT_TYPE
 	ALLEGRO_EVENT_AUDIO_RECORDER_FRAGMENT = 515
 end type
 
-public constant ALLEGRO_AUDIO_RECORDER_EVENT = define_c_type({
+public constant ALLEGRO_AUDIO_RECORDER_EVENT = define_c_struct({
 	C_POINTER, --internal
 	C_POINTER, --buffer
 	C_UINT --samples
@@ -55,7 +55,7 @@ end type
 
 public constant ALLEGRO_AUDIO_PAN_NONE = -1000.0
 
-public constant ALLEGRO_SAMPLE_ID = define_c_type({
+public constant ALLEGRO_SAMPLE_ID = define_c_struct({
 	C_INT, --index
 	C_INT --id
 })
@@ -765,4 +765,4 @@ end function
 public procedure al_destroy_audio_recorder(atom r)
 	c_proc(xal_destroy_audio_recorder,{r})
 end procedure
-­2.16
+­5.18

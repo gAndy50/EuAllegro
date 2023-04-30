@@ -1,3 +1,5 @@
+--Allegro Image Addon
+--Wrapper by Icy Viking
 include std/ffi.e
 include std/machine.e
 include std/os.e
@@ -9,7 +11,7 @@ atom img = 0
 ifdef WINDOWS then
 	img = open_dll("allegro_image-5.2.dll")
 	elsifdef LINUX or FREEBSD then
-	img = open_dll("allegro_image-5.2.so")
+	img = open_dll("liballegro_image-5.2.so")
 end ifdef
 
 export constant xal_init_image_addon = define_c_func(img,"+al_init_image_addon",{},C_BOOL),
@@ -32,4 +34,4 @@ end procedure
 public function al_get_allegro_image_version()
 	return c_func(xal_get_allegro_image_version,{})
 end function
-­33.15
+­14.20

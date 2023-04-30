@@ -72,13 +72,13 @@ public constant ALLEGRO_VERTEX_CACHE_SIZE = 256
 
 public constant ALLEGRO_PRIM_QUALITY = 10
 
-public constant ALLEGRO_VERTEX_ELEMENT = define_c_type({
+public constant ALLEGRO_VERTEX_ELEMENT = define_c_struct({
 	C_INT, --attribute
 	C_INT, --storage
 	C_INT --offset
 })
 
-public constant ALLEGRO_VERTEX = define_c_type({
+public constant ALLEGRO_VERTEX = define_c_struct({
 	C_FLOAT, --x
 	C_FLOAT, --y
 	C_FLOAT, --z
@@ -230,7 +230,7 @@ public procedure al_draw_pieslice(atom cx,atom cy,atom r,atom start,atom theta,s
 end procedure
 
 --for points variable array of [8]
-public constant C_POINTS = define_c_type({
+public constant C_POINTS = define_c_struct({
 	{C_FLOAT,8}
 })
 
@@ -313,4 +313,4 @@ end procedure
 public procedure al_draw_filled_polygon_with_holes(atom vertices,atom count,sequence col)
 	c_proc(xal_draw_filled_polygon_with_holes,{vertices,count,col})
 end procedure
-­3.0
+­233.42

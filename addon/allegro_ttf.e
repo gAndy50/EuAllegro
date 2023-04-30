@@ -13,7 +13,7 @@ include allegro_font.e
 ifdef WINDOWS then
 	  ttf = open_dll("allegro_ttf-5.2.dll")
 	elsifdef LINUX or FREEBSD then
-	  ttf = open_dll("allegro_ttf-5.2.dll.so")
+	  ttf = open_dll("liballegro_ttf-5.2.dll.so")
 end ifdef
 
 public constant ALLEGRO_TTF_NO_KERNING = 1,
@@ -60,4 +60,4 @@ end procedure
 public function al_get_allegro_ttf_version()
 	return c_func(xal_get_allegro_ttf_version,{})
 end function
-­21.31
+­16.22

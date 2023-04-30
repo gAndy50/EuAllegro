@@ -11,10 +11,10 @@ public atom font = 0
 ifdef WINDOWS then
  font = open_dll("allegro_font-5.2.dll")
  elsifdef LINUX or FREEBSD then
- font = open_dll("allegro_font-5.2.so")
+ font = open_dll("liballegro_font-5.2.so")
 end ifdef
 
-public constant ALLEGRO_GLYPH = define_c_type({
+public constant ALLEGRO_GLYPH = define_c_struct({
 	ALLEGRO_BITMAP, --bitmap
 	C_INT, --x
 	C_INT, --y
@@ -226,4 +226,4 @@ export constant xal_get_fallback_font = define_c_func(font,"+al_get_fallback_fon
 public function al_get_fallback_font(atom f)
 	return c_func(xal_get_fallback_font,{f})
 end function
-­15.9
+­14.21
