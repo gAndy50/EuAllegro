@@ -5,7 +5,7 @@ include events.e
 
 public constant ALLEGRO_MOUSE_MAX_EXTRA_AXES = 4
 
-public constant ALLEGRO_MOUSE_STATE = define_c_type({
+public constant ALLEGRO_MOUSE_STATE = define_c_struct({
 	C_INT, --x
 	C_INT, --y
 	C_INT, --z
@@ -110,4 +110,4 @@ end function
 public function al_get_mouse_event_source()
 	return c_func(xal_get_mouse_event_source,{})
 end function
-­30.96
+­8.53

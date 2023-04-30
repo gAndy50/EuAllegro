@@ -3,7 +3,7 @@ include std/ffi.e
 include base.e
 include color.e
 
-public constant ALLEGRO_BITMAP = define_c_type(C_POINTER)
+public constant ALLEGRO_BITMAP = define_c_struct({C_POINTER})
 
 public enum ALLEGRO_MEMORY_BITMAP = 0x0001,
 			ALLEGRO_KEEP_BITMAP_FORMAT = 0x0002,
@@ -241,4 +241,4 @@ end procedure
 public procedure al_get_clipping_rectangle(atom x,atom y,atom w,atom h)
 	c_proc(xal_get_clipping_rectangle,{x,y,w,h})
 end procedure
-­242.3
+­6.60

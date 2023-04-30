@@ -4,7 +4,7 @@ include base.e
 include path.e
 include utf8.e
 
-public constant ALLEGRO_FILE = define_c_type(C_POINTER)
+public constant ALLEGRO_FILE = define_c_struct({C_POINTER})
 
 public enum type ALLEGRO_SEEK
 	ALLEGRO_SEEK_SET = 0,
@@ -12,7 +12,7 @@ public enum type ALLEGRO_SEEK
 	ALLEGRO_SEEK_END
 end type
 
-export constant ALLEGRO_FILE_INTERFACE = define_c_type({
+export constant ALLEGRO_FILE_INTERFACE = define_c_struct({
 	C_POINTER, --void fi_open
 	C_POINTER, --bool fi_close
 	C_POINTER, --size_t fi_read
@@ -290,4 +290,4 @@ export constant xal_get_file_userdata = define_c_func(all,"+al_get_file_userdata
 public function al_get_file_userdata(atom f)
 	return c_func(xal_get_file_userdata,{f})
 end function
-­291.41
+­7.58

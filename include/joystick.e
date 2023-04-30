@@ -7,7 +7,7 @@ public constant AL_MAX_JOYSTICK_AXES = 3,
 				AL_MAX_JOYSTICK_STICKS = 16,
 				AL_MAX_JOYSTICK_BUTTONS = 32
 				
-public constant ALLEGRO_JOYSTICK_STATE = define_c_type({
+public constant ALLEGRO_JOYSTICK_STATE = define_c_struct({
 	{C_FLOAT,AL_MAX_JOYSTICK_AXES}, --axes
 	{C_FLOAT,AL_MAX_JOYSTICK_STICKS}, --sticks
 	{C_INT,AL_MAX_JOYSTICK_BUTTONS} --buttons
@@ -120,4 +120,4 @@ export constant xal_get_joystick_event_source = define_c_func(all,"+al_get_joyst
 public function al_get_joystick_event_source()
 	return c_func(xal_get_joystick_event_source,{})
 end function
-­82.56
+­10.56

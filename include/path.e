@@ -12,7 +12,7 @@ ifdef WINDOWS then
 	public constant ALLEGRO_NATIVE_DRIVE_SEP = "\0"
 end ifdef
 
-public constant ALLEGRO_PATH = define_c_type(C_POINTER)
+public constant ALLEGRO_PATH = define_c_struct({C_POINTER})
 
 
 export constant xal_create_path = define_c_func(all,"+al_create_path",{C_STRING},ALLEGRO_PATH),
@@ -145,4 +145,4 @@ export constant xal_make_path_canonical = define_c_func(all,"+al_make_path_canon
 public function al_make_path_canonical(sequence path)
 	return c_func(xal_make_path_canonical,{path})
 end function
-­146.46
+­15.58

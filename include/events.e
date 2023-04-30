@@ -69,11 +69,11 @@ public enum ALLEGRO_EVENT_JOYSTICK_AXIS = 1,
   
               ALLEGRO_EVENT_DISPLAY_DISCONNECTED        = 61
               
-public constant ALLEGRO_EVENT_SOUCE = define_c_type({
+public constant ALLEGRO_EVENT_SOUCE = define_c_struct({
 	{C_INT,32}
 })
 
-public constant ALLEGRO_DISPLAY_EVENT = define_c_type({
+public constant ALLEGRO_DISPLAY_EVENT = define_c_struct({
 	C_POINTER, --struct AL_EVENT_HEADER
 	C_INT, --x
 	C_INT, --y
@@ -82,7 +82,7 @@ public constant ALLEGRO_DISPLAY_EVENT = define_c_type({
 	C_INT --orientation
 })
 
-public constant ALLEGRO_JOYSTICK_EVENT = define_c_type({
+public constant ALLEGRO_JOYSTICK_EVENT = define_c_struct({
 	C_POINTER, --struct
 	C_POINTER, --struct id
 	C_INT, --stick
@@ -91,7 +91,7 @@ public constant ALLEGRO_JOYSTICK_EVENT = define_c_type({
 	C_INT --button
 })
 
-public constant ALLEGRO_KEYBOARD_EVENT = define_c_type({
+public constant ALLEGRO_KEYBOARD_EVENT = define_c_struct({
 	C_POINTER, --struct header
 	ALLEGRO_DISPLAY_EVENT, --display event struct
 	C_INT, --keycode
@@ -100,7 +100,7 @@ public constant ALLEGRO_KEYBOARD_EVENT = define_c_type({
 	C_BOOL --repeat
 })
 
-public constant ALLEGRO_MOUSE_EVENT = define_c_type({
+public constant ALLEGRO_MOUSE_EVENT = define_c_struct({
 	C_POINTER, --struct header
 	C_POINTER, --struct display
 	C_INT, --x
@@ -111,13 +111,13 @@ public constant ALLEGRO_MOUSE_EVENT = define_c_type({
 	C_FLOAT --pressure
 })
 
-public constant ALLEGRO_TIMER_EVENT = define_c_type({
+public constant ALLEGRO_TIMER_EVENT = define_c_struct({
 	C_POINTER, --event header
 	C_LONG, --count
 	C_DOUBLE --error
 })
 
-public constant ALLEGRO_TOUCH_EVENT = define_c_type({
+public constant ALLEGRO_TOUCH_EVENT = define_c_struct({
 	C_POINTER, --event header
 	C_POINTER, --display struct
 	C_INT, --id
@@ -128,7 +128,7 @@ public constant ALLEGRO_TOUCH_EVENT = define_c_type({
 	C_BOOL --primary
 })
 
-public constant ALLEGRO_USER_EVENT = define_c_type({
+public constant ALLEGRO_USER_EVENT = define_c_struct({
 	C_POINTER, --header struct
 	C_POINTER, --user event struct
 	C_POINTER, --data1
@@ -137,7 +137,7 @@ public constant ALLEGRO_USER_EVENT = define_c_type({
 	C_POINTER -- data4
 })
 
-public constant ALLEGRO_EVENT = define_c_type({
+public constant ALLEGRO_EVENT = define_c_struct({
 	C_INT, --event type (from enum)
 	C_POINTER, --any event
 	ALLEGRO_DISPLAY_EVENT,
@@ -259,4 +259,4 @@ end function
 public function al_wait_for_event_until(sequence que,sequence ret,atom timeout)
 	return c_func(xal_wait_for_event_until,{que,ret,timeout})
 end function
-­226.12
+­140.47

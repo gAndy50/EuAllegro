@@ -3,7 +3,7 @@ include std/machine.e
 
 include base.e
 
-public constant ALLEGRO_COLOR = define_c_type({
+public constant ALLEGRO_COLOR = define_c_struct({
 	C_FLOAT, --r
 	C_FLOAT, --g
 	C_FLOAT, --b
@@ -106,4 +106,4 @@ end function
 public function al_premul_rgba_f(atom r,atom g,atom b,atom a)
 	return c_func(xal_premul_rgba_f,{r,g,b,a})
 end function
-­89.0
+­6.47

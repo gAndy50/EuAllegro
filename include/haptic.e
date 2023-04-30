@@ -30,36 +30,36 @@ public constant ALLEGRO_HAPTIC_RUMBLE = shift_bits(1,0),
 				ALLEGRO_HAPTIC_AZIMUTH = shift_bits(1,-17),
 				ALLEGRO_HAPTIC_AUTOCENTER = shift_bits(1,-18)
 				
-public constant ALLEGRO_HAPTIC_DIRECTION = define_c_type({
+public constant ALLEGRO_HAPTIC_DIRECTION = define_c_struct({
 	C_DOUBLE, --angle
 	C_DOUBLE, --radius
 	C_DOUBLE --azimuth
 })
 
-public constant ALLEGRO_HAPTIC_REPLAY = define_c_type({
+public constant ALLEGRO_HAPTIC_REPLAY = define_c_struct({
 	C_DOUBLE, --length
 	C_DOUBLE --delay
 })
 
-public constant ALLEGRO_HAPTIC_ENVELOPE = define_c_type({
+public constant ALLEGRO_HAPTIC_ENVELOPE = define_c_struct({
 	C_DOUBLE, --attack_length
 	C_DOUBLE, --attack_level
 	C_DOUBLE, --fade_length
 	C_DOUBLE --fade_level
 })
 
-public constant ALLEGRO_HAPTIC_CONSTANT_EFFECT = define_c_type({
+public constant ALLEGRO_HAPTIC_CONSTANT_EFFECT = define_c_struct({
 	C_DOUBLE, --level
 	ALLEGRO_HAPTIC_ENVELOPE --envelope
 })
 
-public constant ALLEGRO_HAPTIC_RAMP_EFFECT = define_c_type({
+public constant ALLEGRO_HAPTIC_RAMP_EFFECT = define_c_struct({
 	C_DOUBLE, --start_level
 	C_DOUBLE, --end_level
 	ALLEGRO_HAPTIC_ENVELOPE --envelope
 })
 
-public constant ALLEGRO_HAPTIC_CONDITION_EFFECT = define_c_type({
+public constant ALLEGRO_HAPTIC_CONDITION_EFFECT = define_c_struct({
 	C_DOUBLE, --right_saturation
 	C_DOUBLE, --left_saturation
 	C_DOUBLE, --right_coeff
@@ -68,7 +68,7 @@ public constant ALLEGRO_HAPTIC_CONDITION_EFFECT = define_c_type({
 	C_DOUBLE --center
 })
 
-public constant ALLEGRO_HAPTIC_PERIODIC_EFFECT = define_c_type({
+public constant ALLEGRO_HAPTIC_PERIODIC_EFFECT = define_c_struct({
 	C_INT, --waveform
 	C_DOUBLE, --period
 	C_DOUBLE, --magnitude
@@ -79,12 +79,12 @@ public constant ALLEGRO_HAPTIC_PERIODIC_EFFECT = define_c_type({
 	C_POINTER --custom_data
 })
 
-public constant ALLEGRO_HAPTIC_RUMBLE_EFFECT = define_c_type({
+public constant ALLEGRO_HAPTIC_RUMBLE_EFFECT = define_c_struct({
 	C_DOUBLE, --strong_magnitude
 	C_DOUBLE --weak magnitude
 })
 
-public constant ALLEGRO_HAPTIC_EFFECT_UNION = define_c_type({
+public constant ALLEGRO_HAPTIC_EFFECT_UNION = define_c_struct({
 	ALLEGRO_HAPTIC_CONSTANT_EFFECT,
 	ALLEGRO_HAPTIC_RAMP_EFFECT,
 	ALLEGRO_HAPTIC_PERIODIC_EFFECT,
@@ -92,14 +92,14 @@ public constant ALLEGRO_HAPTIC_EFFECT_UNION = define_c_type({
 	ALLEGRO_HAPTIC_RUMBLE_EFFECT
 })
 
-public constant ALLEGRO_HAPTIC_EFFECT = define_c_type({
+public constant ALLEGRO_HAPTIC_EFFECT = define_c_struct({
 	C_INT, --type
 	ALLEGRO_HAPTIC_DIRECTION,
 	ALLEGRO_HAPTIC_REPLAY,
 	ALLEGRO_HAPTIC_EFFECT_UNION
 })
 
-public constant ALLEGRO_HAPTIC_EFFECT_ID = define_c_type({
+public constant ALLEGRO_HAPTIC_EFFECT_ID = define_c_struct({
 	C_POINTER, --haptic
 	C_INT, --id
 	C_INT, --handle
@@ -244,4 +244,4 @@ end function
 
 --For testing shift_bits values				
 --printf(1,"%d",{ALLEGRO_HAPTIC_ANGLE})
-­196.53
+­102.58

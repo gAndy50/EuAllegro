@@ -2,7 +2,7 @@ include std/ffi.e
 
 include base.e
 
-public constant ALLEGRO_MONITOR_INFO = define_c_type({
+public constant ALLEGRO_MONITOR_INFO = define_c_struct({
 	C_INT, --x1
 	C_INT, --y1
 	C_INT, --x2
@@ -26,4 +26,4 @@ end function
 public function al_get_monitor_dpi(atom adapter)
 	return c_func(xal_get_monitor_dpi,{adapter})
 end function
-­27.45
+­5.54

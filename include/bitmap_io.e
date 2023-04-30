@@ -8,27 +8,27 @@ public enum ALLEGRO_KEEP_BITMAP_FORMAT = 0x0002,
 			ALLEGRO_NO_PREMULTIPLIED_ALPHA = 0x0200,
 			ALLEGRO_KEEP_INDEX = 0x0800
 			
-public constant ALLEGRO_IIO_LOADER_FUNCTION = define_c_type({
+public constant ALLEGRO_IIO_LOADER_FUNCTION = define_c_struct({
 		C_STRING, --filename
 		C_INT --flags
 })
 
-public constant ALLEGRO_IIO_FS_LOADER_FUNCTION = define_c_type({
+public constant ALLEGRO_IIO_FS_LOADER_FUNCTION = define_c_struct({
 		ALLEGRO_FILE, --*fp
 		C_INT --flags
 })
 
-public constant ALLEGRO_IIO_SAVER_FUNCTION = define_c_type({
+public constant ALLEGRO_IIO_SAVER_FUNCTION = define_c_struct({
 		C_STRING, --filename
 		ALLEGRO_BITMAP --bitmap
 })
 
-public constant ALLEGRO_IIO_FS_SAVER_FUNCTION = define_c_type({
+public constant ALLEGRO_IIO_FS_SAVER_FUNCTION = define_c_struct({
 		ALLEGRO_FILE, --*fp
 		ALLEGRO_BITMAP --bitmap
 })
 
-public constant ALLEGRO_IIO_IDENTIFIER_FUNCTION = define_c_type(ALLEGRO_FILE)
+public constant ALLEGRO_IIO_IDENTIFIER_FUNCTION = define_c_struct({ALLEGRO_FILE})
 
 
 export constant xal_register_bitmap_loader = define_c_func(all,"+al_register_bitmap_loader",{C_STRING,ALLEGRO_IIO_LOADER_FUNCTION},C_BOOL),
@@ -96,4 +96,4 @@ end function
 public function al_identify_bitmap(sequence fname)
 	return c_func(xal_identify_bitmap,{fname})
 end function
-­90.12
+­31.80

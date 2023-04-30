@@ -4,7 +4,7 @@ include base.e
 include events.e
 include keycodes.e
 
-public constant ALLEGRO_KEYBOARD_STATE = define_c_type({
+public constant ALLEGRO_KEYBOARD_STATE = define_c_struct({
 	C_POINTER, --struct display
 	C_UINT --key_down_internal
 })
@@ -56,4 +56,4 @@ export constant xal_get_keyboard_event_source = define_c_func(all,"+al_get_keybo
 public function al_get_keyboard_event_source()
 	return c_func(xal_get_keyboard_event_source,{})
 end function
-­57.48
+­7.56

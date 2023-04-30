@@ -2,7 +2,7 @@ include std/ffi.e
 
 include base.e
 
-public constant ALLEGRO_TIMEOUT = define_c_type({
+public constant ALLEGRO_TIMEOUT = define_c_struct({
 	C_LONG, --pad1
 	C_LONG --pad2
 })
@@ -22,4 +22,4 @@ end procedure
 public procedure al_init_timeout(sequence timeout, atom seconds)
 	c_proc(xal_init_timeout,{timeout,seconds})
 end procedure
-­23.43
+­5.49

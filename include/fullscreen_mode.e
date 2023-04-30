@@ -2,7 +2,7 @@ include std/ffi.e
 
 include base.e
 
-public constant ALLEGRO_DISPLAY_MODE = define_c_type({
+public constant ALLEGRO_DISPLAY_MODE = define_c_struct({
 	C_INT, --width
 	C_INT, --height
 	C_INT, --format
@@ -19,4 +19,4 @@ end function
 public function al_get_display_mode(atom index,sequence mode)
 	return c_func(xal_get_display_mode,{index,mode})
 end function
-­20.49
+­5.54

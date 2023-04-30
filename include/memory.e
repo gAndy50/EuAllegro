@@ -2,7 +2,7 @@ include std/ffi.e
 
 include base.e
 
-export constant ALLEGRO_MEMORY_INTERFACE = define_c_type({
+export constant ALLEGRO_MEMORY_INTERFACE = define_c_struct({
 	C_POINTER, --mi_malloc
 	C_POINTER, --mi_free
 	C_POINTER, --mi_realloc
@@ -60,4 +60,4 @@ end function
 public function al_calloc_with_context(atom count,atom n,atom line,sequence file,sequence func)
 	return c_func(xal_calloc_with_context,{count,n,line,file,func})
 end function
-­61.64
+­5.58

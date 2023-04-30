@@ -13,7 +13,7 @@ public constant ALLEGRO_STATE_NEW_DISPLAY_PARAMETERS = 0x0001,
 				ALLEGRO_STATE_BITMAP = ALLEGRO_STATE_TARGET_BITMAP + ALLEGRO_STATE_NEW_BITMAP_PARAMETERS,
 				ALLEGRO_STATE_ALL = 0xffff
 				
-public constant ALLEGRO_STATE = define_c_type({
+public constant ALLEGRO_STATE = define_c_struct({
 	{C_CHAR,1024}
 })
 
@@ -30,4 +30,4 @@ end procedure
 
 --For testing hex values				
 --printf(1,"%d",{ALLEGRO_STATE_ALL})
-­28.34
+­16.47

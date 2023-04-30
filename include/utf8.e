@@ -2,10 +2,10 @@ include std/ffi.e
 
 include base.e
 
-public constant ALLEGRO_USTR = define_c_type(C_POINTER)
-public constant ALLEGRO_USTR_INFO = define_c_type(C_POINTER)
+public constant ALLEGRO_USTR = define_c_struct({C_POINTER})
+public constant ALLEGRO_USTR_INFO = define_c_struct({C_POINTER})
 
-public constant _al_tabstring = define_c_type({
+public constant _al_tabstring = define_c_struct({
 	C_INT, --mlen
 	C_INT, --slen
 	C_POINTER --data
@@ -367,4 +367,4 @@ end function
 public function al_utf16_encode(object s,atom c)
 	return c_func(xal_utf16_encode,{s,c})
 end function
-­368.38
+­6.63

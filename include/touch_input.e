@@ -5,7 +5,7 @@ include events.e
 
 public constant ALLEGRO_TOUCH_INPUT_MAX_TOUCH_COUNT = 16
 
-public constant ALLEGRO_TOUCH_STATE = define_c_type({
+public constant ALLEGRO_TOUCH_STATE = define_c_struct({
 	C_INT, --id
 	C_FLOAT, --x
 	C_FLOAT, --y
@@ -15,7 +15,7 @@ public constant ALLEGRO_TOUCH_STATE = define_c_type({
 	C_POINTER --display struct
 })
 
-public constant ALLEGRO_TOUCH_INPUT_STATE = define_c_type({
+public constant ALLEGRO_TOUCH_INPUT_STATE = define_c_struct({
 	{ALLEGRO_TOUCH_STATE,ALLEGRO_TOUCH_INPUT_MAX_TOUCH_COUNT}
 })
 
@@ -71,4 +71,4 @@ end function
 public function al_get_touch_input_mouse_emulation_event_source()
 	return c_func(xal_get_touch_input_mouse_emulation_event_source,{})
 end function
-­72.67
+­18.59

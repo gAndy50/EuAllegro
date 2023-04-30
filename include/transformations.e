@@ -3,7 +3,7 @@ include std/ffi.e
 include base.e
 include display.e
 
-public constant ALLEGRO_TRANSFORM = define_c_type({
+public constant ALLEGRO_TRANSFORM = define_c_struct({
 	{C_FLOAT,4,4}
 })
 
@@ -135,4 +135,4 @@ end procedure
 public procedure al_vertical_shear_transform(sequence trans,atom theta)
 	c_proc(xal_vertical_shear_transform,{trans,theta})
 end procedure
-­34.61
+­6.51

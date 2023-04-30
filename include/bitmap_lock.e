@@ -7,7 +7,7 @@ public enum ALLEGRO_LOCK_READWIRTE = 0,
 			ALLEGRO_LOCK_READONLY,
 			ALLEGRO_LOCK_WRITEONLY
 			
-public constant ALLEGRO_LOCKED_REGION = define_c_type({
+public constant ALLEGRO_LOCKED_REGION = define_c_struct({
 		C_POINTER, --data
 		C_INT, --format
 		C_INT, --pitch
@@ -45,4 +45,4 @@ end procedure
 public function al_is_bitmap_locked(atom bitmap)
 	return c_func(xal_is_bitmap_locked,{bitmap})
 end function
-­23.44
+­10.55

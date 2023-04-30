@@ -6,7 +6,7 @@ include path.e
 
 include std/math.e --for shift_bits()
 
-public constant ALLEGRO_FS_ENTRY = define_c_type({
+public constant ALLEGRO_FS_ENTRY = define_c_struct({
 	C_POINTER --vtable
 })
 
@@ -20,7 +20,7 @@ public constant ALLEGRO_FILEMODE_READ = 1,
 				
 public constant EOF = -1
 
-public constant ALLEGRO_FS_INTERFACE = define_c_type({
+public constant ALLEGRO_FS_INTERFACE = define_c_struct({
 	C_POINTER, --fs_create_entry
 	C_POINTER, --fs_destroy_entry
 	C_POINTER, --fs_entry_name
@@ -282,4 +282,4 @@ end procedure
 public procedure al_set_standard_fs_interface()
 	c_proc(xal_set_standard_fs_interface,{})
 end procedure
-­283.41
+­23.54
