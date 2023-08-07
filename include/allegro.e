@@ -3,7 +3,7 @@
 --Euphoria 4.1.0 Beta 2	 --
 --Using FFI.e 			 --
 --Written Andy P.		 --
---Copyright (c) 2022	 --
+--Copyright (c) 2023	 --
 ---------------------------
 
 -----------------------------------------------------------------------------------------
@@ -60,4 +60,4 @@ public include tls.e
 public include touch_input.e
 public include transformations.e
 public include utf8.e
-­44.0
+Â­44.0
