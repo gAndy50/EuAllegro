@@ -137,7 +137,7 @@ public constant ALLEGRO_USER_EVENT = define_c_struct({
 	C_POINTER -- data4
 })
 
-public constant ALLEGRO_EVENT = define_c_struct({
+public constant ALLEGRO_EVENT = define_c_union({
 	C_INT, --event type (from enum)
 	C_POINTER, --any event
 	ALLEGRO_DISPLAY_EVENT,
@@ -259,4 +259,4 @@ end function
 public function al_wait_for_event_until(sequence que,sequence ret,atom timeout)
 	return c_func(xal_wait_for_event_until,{que,ret,timeout})
 end function
-­140.47
+Â­140.47
